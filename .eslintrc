@@ -1,0 +1,26 @@
+{
+  "extends":[
+    "airbnb-base",
+    "jquery"
+  ],
+  "env":{
+    "browser":true,
+    "commonjs":true,
+    "es6":true,
+    "jquery":true
+  },
+  "globals":{
+    "jQuery":"true",
+    "$":true
+  },
+  "rules":{
+    "semi":[
+      0,
+      "always"
+    ],
+    "func-names":[
+      0,
+      "always"
+    ]
+  }
+}

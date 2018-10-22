@@ -1,0 +1,27 @@
+@import "sanitize.less";
+@import "variables.less";
+@import "components/header.less";
+@import "components/footer.less";
+
+body {
+  font-family: "Helvetica Neue", Helvetica, serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.debug {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 2px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 10px;
+  background-color: @primaryColor;
+}
+
+.wrapper {
+  max-width: 1160px;
+  padding: 0 20px;
+  margin: auto;
+}

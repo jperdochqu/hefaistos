@@ -1,0 +1,172 @@
+.TopBar {
+  background-color: @primaryColor;
+  font-size: 13px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: @fontColorLight;
+
+  .wrapper {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: wrap row;
+  }
+
+  li {
+    a {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: @fontColorLight;
+    }
+
+    &:hover,
+    &:active,
+    &.active {
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    &:first-child {
+      a {
+        padding-left: 0;
+      }
+    }
+
+    &:last-child {
+      a {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.Header {
+  margin-bottom: 35px;
+  padding: 35px 0;
+  border-bottom: 1px solid #fafafa;
+
+  .wrapper {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+  }
+}
+
+.Header__logo {
+  position: relative;
+
+  &__title {
+    font-size: 62px;
+    line-height: 62px;
+    font-weight: 300;
+    letter-spacing: 2px;
+
+    &::after {
+      content: "🌋";
+      position: absolute;
+      padding-left: 10px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 17px;
+    line-height: 28px;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #2d2d2d;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background-color: transparent;
+      transition: all .5s;
+    }
+
+    &:hover,
+    &:active {
+      &::before{
+        bottom: -10px;
+        background-color: @primaryColor;
+      }
+    }
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.Header__nav {
+  display: flex;
+  flex-flow: wrap row;
+  align-items: center;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: wrap row;
+  }
+
+  li {
+    position: relative;
+    margin: 0 20px;
+    font-size: 18px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      position: relative;
+      display: block;
+      padding: 10px 0;
+      text-decoration: none;
+      color: @fontColorDark;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background-color: @primaryColor;
+        transition: all .3s;
+      }
+    }
+
+    &:hover,
+    &:active,
+    &.active {
+      a {
+        &::after {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

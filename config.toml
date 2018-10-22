@@ -1,0 +1,62 @@
+baseURL = "https://hefaistos.martinstepanek.sk/"
+languageCode = "en-gb"
+defaultContentLanguage = "en"
+title = "Hefaistos"
+
+disableHugoGeneratorInject = true
+enableEmoji = true
+quality = 85
+
+tags = []
+features = []
+
+[author]
+  name = "Martin Stepanek"
+  homepage = "https://martinstepanek.sk/"
+
+
+[menu]
+
+  [[menu.topbar_left]]
+    weight = 1
+    name = "Home"
+    url = ""
+
+  [[menu.topbar_left]]
+    weight = 2
+    name = "Contact"
+    url = "/contact"
+
+
+  [[menu.topbar_right]]
+    weight = 1
+    name = "Facebook"
+    url = "https://www.facebook.com/mvstepanek"
+
+  [[menu.topbar_right]]
+    weight = 2
+    name = "Instagram"
+    url = "https://www.instagram.com/mvstepanek"
+
+  [[menu.topbar_right]]
+    weight = 3
+    name = "GitHub"
+    url = "https://github.com/mvstepanek/hefaistos"
+
+
+  [[menu.main]]
+    weight = 1
+    name = "Home"
+    url = ""
+  [[menu.main]]
+    weight = 2
+    name = "Docs"
+    url = "/docs"
+  [[menu.main]]
+    weight = 3
+    name = "Showcase"
+    url = "/showcase"
+  [[menu.main]]
+    weight = 4
+    name = "Blog"
+    url = "/blog"

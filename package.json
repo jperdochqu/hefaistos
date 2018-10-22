@@ -1,0 +1,47 @@
+{
+  "name":"hefaistos",
+  "version":"1.0.0",
+  "description":"the hugo theme framework",
+  "main":"index.html",
+  "scripts":{
+    "test":"gulp stylelint && gulp eslint",
+    "build":"gulp styles && gulp vendorsJs && gulp scriptsJs && gulp images && hugo",
+    "deploy":"npm run build && firebase deploy",
+    "start-watch":"gulp",
+    "hugo-server":"hugo server -D -E -F",
+    "dev":"gulp styles && gulp vendorsJs && gulp scriptsJs && gulp images && concurrently --kill-others \"npm run start-watch\" \"npm run hugo-server\""
+  },
+  "author":"Martin Stepanek",
+  "license":"MIT",
+  "repository":{
+    "type":"git",
+    "url":"git@github.com:mvstepanek/hefaistos.git"
+  },
+  "dependencies":{
+    "gulp":"^3.9",
+    "gulp-less":"^4",
+    "gulp-autoprefixer":"^6",
+    "gulp-uglifycss":"^1.1",
+    "gulp-filter":"^5.1",
+    "gulp-uglify":"^3",
+    "gulp-imagemin":"^4.1",
+    "gulp-newer":"^1.4",
+    "gulp-rename":"^1.4",
+    "gulp-concat":"^2.6",
+    "gulp-group-css-media-queries":"^1.2",
+    "gulp-rimraf":"^0.2",
+    "gulp-plumber":"^1.2",
+    "gulp-cache":"^1",
+    "gulp-sourcemaps":"^2.6",
+    "stylelint":"^9.6",
+    "gulp-stylelint":"^7",
+    "eslint":"^5.7",
+    "gulp-eslint":"^5",
+    "eslint-config-airbnb-base":"^13.1",
+    "eslint-config-jquery":"^1",
+    "eslint-plugin-import":"^2.14",
+    "browser-sync":"^2.26",
+    "concurrently":"^4",
+    "firebase-tools":"^5.1"
+  }
+}

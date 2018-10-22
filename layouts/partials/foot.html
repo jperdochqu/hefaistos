@@ -1,0 +1,5 @@
+{{ $vendors := resources.Get "js/vendors.min.js" }}
+{{ $custom := resources.Get "js/app.min.js" }}
+{{ $js := slice $vendors $custom | resources.Concat "js/app.js" | resources.Minify }}
+{{ $secureJS := $js | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>

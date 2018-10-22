@@ -1,0 +1,57 @@
+<section class="TopBar">
+  <div class="wrapper">
+
+    <nav class="TopBar__leftNav">
+      <ul>
+        {{ $title := .Title }}
+        {{ range .Site.Menus.topbar_left }}
+          {{ $url := urls.Parse .URL }}
+          {{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
+          <li {{ if eq .Name $title }} class="active" {{ end }}>
+            <a href="{{ .URL }}/" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+
+    <nav class="TopBar__rightNav">
+      <ul>
+        {{ $title := .Title }}
+        {{ range .Site.Menus.topbar_right }}
+          {{ $url := urls.Parse .URL }}
+          {{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
+          <li {{ if eq .Name $title }} class="active" {{ end }}>
+            <a href="{{ .URL }}/" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+
+  </div>
+</section>
+
+<header class="Header">
+  <div class="wrapper">
+    
+    <div class="Header__logo">
+      <a href="{{ .Site.BaseURL }}">
+        <span class="Header__logo__title">{{ .Site.Title }}</span>
+        <span class="Header__logo__subtitle">The Hugo Theme Framework</span>
+      </a>
+    </div>
+
+    <nav class="Header__nav">
+      <ul>
+        {{ $title := .Title }}
+        {{ range .Site.Menus.main }}
+          {{ $url := urls.Parse .URL }}
+          {{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
+          <li {{ if eq .Name $title }} class="active" {{ end }}>
+            <a href="{{ .URL }}/" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+
+  </div>
+</header>
